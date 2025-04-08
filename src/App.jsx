@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <div>
-        {isLoggedIn ? <Dashboard /> : <Login onLogin={handleLogin} />}
+        {!isLoggedIn ? <Dashboard /> : <Login onLogin={handleLogin} />}
     </div>
   )
 }

@@ -1,11 +1,13 @@
+
 import React from 'react'
+import Navbar from './Navbar'
 
 const Dashboard = () => {
   return (
     <div>
-        <h1>pWelcome to the Dashboard</h1>
-        <p>This is your dashboard content.</p>
+      <Navbar searchbar={true}/>
 
+      
     </div>
   )
 }
