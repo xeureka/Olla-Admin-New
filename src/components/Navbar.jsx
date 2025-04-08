@@ -24,7 +24,7 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`sticky w-full p-1 mb-8 top-0 z-40 flex flex-row flex-wrap items-center justify-between bg-white/10 dark:bg-white`}
+      className={`sticky w-full p-1 mb-8 top-0 z-40 flex flex-row flex-wrap items-center justify-between bg-white/10 dark:bg-white backdrop-blur-lg border-b border-gray-200/30 text-black  text-3xl`}
       style={{ borderRadius: "10px" }}
     >
       <img className="h-16 w-16 ml-4 rounded-full" src={Logo} alt="logo" />
