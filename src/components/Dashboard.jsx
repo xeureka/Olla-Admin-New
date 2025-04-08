@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 // Lucide Icons
 import { MapPin, User, MessageCircle, Compass, FileText, ShoppingCart } from 'lucide-react';
@@ -57,12 +58,13 @@ const Dashboard = () => {
           />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };
 
-
-// Card componennt
+// Card component
 const DashboardCard = ({ icon, title, to, description }) => (
   <Link
     to={to}
