@@ -3,12 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 
 // import Navbar from './Navbar';
 // import Footer from './Footer';
-import PlaceList from '../pages/PlaceList';
-import UserList from '../pages/UserList';
-import Community from '../pages/Community';
-import Trip from '../pages/Trip';
-import Providers from '../pages/Providers';
-import Feeds from '../pages/Feeds';
+
 
 // Lucide Icons
 import { MapPin, User, MessageCircle, Compass, FileText, ShoppingCart } from 'lucide-react';
@@ -71,32 +66,24 @@ const Dashboard = () => {
 
       
 
-      {/* Routes */}
-      <Routes>
-        <Route path="/placeList" element={<PlaceList />} />
-        <Route path="/userList" element={<UserList />} />
-        <Route path="/communityList" element={<Community />} />
-        <Route path="/tripGuideList" element={<Trip />} />
-        <Route path="/feedList" element={<Feeds />} />
-        <Route path="/providersList" element={<Providers />} />
-      </Routes>
+
 
     </div>
   );
 };
 
-// Card component
-const DashboardCard = ({ icon, title, to, description }) => (
-  <Link
-    to={to}
-    className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3"
-  >
-    {icon}
-    <div>
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
-  </Link>
-);
+// // Card component
+// const DashboardCard = ({ icon, title, to, description }) => (
+//   <Link
+//     to={to}
+//     className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3"
+//   >
+//     {icon}
+//     <div>
+//       <h3 className="text-xl font-semibold">{title}</h3>
+//       <p className="text-sm text-gray-600">{description}</p>
+//     </div>
+//   </Link>
+// );
 
 export default Dashboard;

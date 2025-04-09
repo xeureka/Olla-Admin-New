@@ -16,63 +16,59 @@ export const Footer = () => {
   }, []);
 
   return (
-    <div className="mt-10 bottom-0 w-full bg-white bg-opacity-30 backdrop-blur-md">
+    <div className="mt-10 bottom-0 w-full bg-slate-900 p-6 bg-opacity-30 backdrop-blur-md">
       <div className="mx-auto text-white pb-10 px-4">
         <div
           className={`flex w-full ${
             isWindowSmall
               ? "flex-col justify-center items-center"
-              : "justify-between"
+              : "justify-between items-center"
           }`}
         >
+          {/* Logo and Title */}
           <h1
-            className={`text-3xl text-white flex flex-row items-center ${
-              isWindowSmall ? "justify-center" : ""
+            className={`text-3xl text-white flex items-center ${
+              isWindowSmall ? "justify-center mb-6" : ""
             }`}
           >
-            <img src={Logo} className="w-[10%]" alt="Logo" />
-            <span className="ml-2">Admin Page</span>
+            <img src={Logo} className="w-10 h-10 mr-3" alt="Logo" />
+            <span className="font-semibold">Admin Dashboard</span>
           </h1>
 
-          <div className="flex justify-center flex-wrap mt-10 md:mt-0">
+          {/* App Store Links */}
+          <div className="flex justify-center flex-wrap mt-4 md:mt-0">
             {/* Google Play */}
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
-              <Store className="w-7 h-7 md:w-8 md:h-8 text-white" />
+            <button className="flex items-center border border-gray-400 hover:border-white transition rounded-xl px-4 py-3 mx-2 bg-slate-800/40 backdrop-blur-md">
+              <Store className="w-6 h-6 text-white" />
               <div className="text-left ml-3">
-                <p className="text-xs text-gray-200">Download on</p>
-                <p className="text-sm md:text-base">Google Play Store</p>
+                <p className="text-[11px] text-gray-300">GET IT ON</p>
+                <p className="text-sm font-semibold">Google Play</p>
               </div>
-            </div>
+            </button>
 
-            {/* Apple Store */}
-            <div className="flex items-center border w-auto rounded-lg px-4 py-2 mx-2">
-              <Apple className="w-7 h-7 md:w-8 md:h-8 text-white" />
+            {/* App Store */}
+            <button className="flex items-center border border-gray-400 hover:border-white transition rounded-xl px-4 py-3 mx-2 bg-slate-800/40 backdrop-blur-md">
+              <Apple className="w-6 h-6 text-white" />
               <div className="text-left ml-3">
-                <p className="text-xs text-gray-200">Download on</p>
-                <p className="text-sm md:text-base">Apple Store</p>
+                <p className="text-[11px] text-gray-300">Download on the</p>
+                <p className="text-sm font-semibold">App Store</p>
               </div>
-            </div>
+            </button>
           </div>
         </div>
 
-        <div className="mt-2 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-          <p className="order-2 md:order-1 mt-8 md:mt-0 ml-3">
-            &copy; Olla, {new Date().getFullYear()}.
-          </p>
-          <div className="order-1 md:order-2">
-            <span className="px-2 cursor-pointer hover:underline">About us</span>
-            <span className="px-2 border-l cursor-pointer hover:underline">
-              Contact us
-            </span>
-            <span className="px-2 border-l mr-3 cursor-pointer hover:underline">
-              Privacy Policy
-            </span>
+        {/* Bottom Links */}
+        <div className="mt-10 flex flex-col md:flex-row md:justify-between items-center text-sm text-white font-bold border-t border-white/10 pt-4">
+          <p className="order-2 md:order-1 mt-4 md:mt-0">&copy; Olla, {new Date().getFullYear()}</p>
+          <div className="order-1 md:order-2 space-x-4">
+            <span className="cursor-pointer hover:underline">About Us</span>
+            <span className="border-l pl-4 cursor-pointer hover:underline">Contact Us</span>
+            <span className="border-l pl-4 cursor-pointer hover:underline">Privacy Policy</span>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default Footer;

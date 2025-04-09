@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import Logo from "../public/images/logo.png";
+import {Link } from 'react-router-dom'
 
 const Navbar = (props) => {
   const { brandText, searchbar } = props;
@@ -27,8 +28,10 @@ const Navbar = (props) => {
       className={`sticky w-full p-1 mb-8 top-0 z-40 flex flex-row flex-wrap items-center justify-between bg-white/10 dark:bg-white backdrop-blur-lg border-b border-gray-200/30 text-black  text-3xl`}
       style={{ borderRadius: "10px" }}
     >
-      <img className="h-16 w-16 ml-4 rounded-full" src={Logo} alt="logo" />
-
+      
+      <Link to='/'>
+        <img className="h-16 w-16 ml-4 rounded-full" src={Logo} alt="logo"  />
+      </Link>
       {/* {searchbar ? (
         <div className="relative mt-[3px] flex h-[61px] w-1/2 flex-grow items-center justify-around gap-2 rounded-full bg-white px-2 py-2 shadow-xl shadow-shadow-500 dark:!bg-navy-800 dark:shadow-none md:w-[395px] md:flex-grow-0 md:gap-1 xl:w-[395px] xl:gap-2">
           <div className="flex h-full items-center rounded-full bg-lightPrimary text-navy-700 dark:bg-navy-900 dark:text-white xl:w-[355px] border border-solid border-[#93cc4e] border-[0.15rem]">
