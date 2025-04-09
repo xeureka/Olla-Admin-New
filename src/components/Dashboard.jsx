@@ -1,7 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import { Routes, Route, Link } from 'react-router-dom';
+
+// import Navbar from './Navbar';
+// import Footer from './Footer';
+import PlaceList from '../pages/PlaceList';
+import UserList from '../pages/UserList';
+import Community from '../pages/Community';
+import Trip from '../pages/Trip';
+import Providers from '../pages/Providers';
+import Feeds from '../pages/Feeds';
 
 // Lucide Icons
 import { MapPin, User, MessageCircle, Compass, FileText, ShoppingCart } from 'lucide-react';
@@ -9,57 +16,71 @@ import { MapPin, User, MessageCircle, Compass, FileText, ShoppingCart } from 'lu
 const Dashboard = () => {
   return (
     <div>
-      <Navbar searchbar={true} />
+     
 
-      <div className="p-6">
-        <h2 className="text-2xl font-bold mb-6">Dashboard</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <DashboardCard
-            icon={<MapPin className="text-green-500 w-6 h-6" />}
-            title="Places"
-            to="/placeList"
-            description="You'll find all Places registered to the system here."
-          />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-6">
+        <Link to="/placeList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <MapPin className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Places</h3>
+            <p>You'll find all Places registered to the system here.</p>
+          </div>
+        </Link>
 
-          <DashboardCard
-            icon={<User className="text-green-500 w-6 h-6" />}
-            title="Users"
-            to="/userList"
-            description="You'll find all users registered to the system here."
-          />
+        <Link to="/userList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <User className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Users</h3>
+            <p>You'll find all users registered to the system here.</p>
+          </div>
+        </Link>
 
-          <DashboardCard
-            icon={<MessageCircle className="text-green-500 w-6 h-6" />}
-            title="Communities"
-            to="/communityList"
-            description="You'll find all communities registered to the system here."
-          />
+        <Link to="/communityList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <MessageCircle className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Communities</h3>
+            <p>You'll find all communities registered to the system here.</p>
+          </div>
+        </Link>
 
-          <DashboardCard
-            icon={<Compass className="text-green-500 w-6 h-6" />}
-            title="Trip Guides"
-            to="/tripGuideList"
-            description="You'll find all trip guides registered to the system here."
-          />
+        <Link to="/tripGuideList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <Compass className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Trip Guides</h3>
+            <p>You'll find all trip guides registered to the system here.</p>
+          </div>
+        </Link>
 
-          <DashboardCard
-            icon={<FileText className="text-green-500 w-6 h-6" />}
-            title="Feeds"
-            to="/feedList"
-            description="You'll find all feeds registered to the system here."
-          />
+        <Link to="/feedList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <FileText className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Feeds</h3>
+            <p>You'll find all feeds registered to the system here.</p>
+          </div>
+        </Link>
 
-          <DashboardCard
-            icon={<ShoppingCart className="text-green-500 w-6 h-6" />}
-            title="Providers"
-            to="/providersList"
-            description="You'll find all providers registered to the system here."
-          />
-        </div>
+        <Link to="/providersList" className="border rounded-xl shadow p-4 hover:shadow-lg transition flex items-start gap-3">
+          <ShoppingCart className="text-green-500" />
+          <div>
+            <h3 className="text-xl font-semibold">Providers</h3>
+            <p>You'll find all providers registered to the system here.</p>
+          </div>
+        </Link>
       </div>
 
-      <Footer />
+      
+
+      {/* Routes */}
+      <Routes>
+        <Route path="/placeList" element={<PlaceList />} />
+        <Route path="/userList" element={<UserList />} />
+        <Route path="/communityList" element={<Community />} />
+        <Route path="/tripGuideList" element={<Trip />} />
+        <Route path="/feedList" element={<Feeds />} />
+        <Route path="/providersList" element={<Providers />} />
+      </Routes>
+
     </div>
   );
 };
