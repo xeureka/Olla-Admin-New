@@ -72,8 +72,8 @@ const Navbar = (props) => {
             dropdownOpen ? "scale-100" : "scale-0"
           }`}
         >
-          <div className="flex h-48 w-56 flex-col justify-start rounded-[20px] bg-white bg-cover bg-no-repeat shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
-            <div className="mt-3 ml-4">
+          <div className="flex h-48 w-56  flex-col justify-start rounded-[20px] bg-white  border-gray-200 border-[0.2px] shadow-xl shadow-shadow-500 dark:!bg-navy-700 dark:text-white dark:shadow-none">
+            <div className="mt-3   ml-4">
               <div className="flex items-center gap-2">
                 <p className="text-sm font-bold text-navy-700 dark:text-black">
                   👋 Hey, User
